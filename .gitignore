@@ -4,3 +4,6 @@ myvenv
 db.sqlite3
 .DS_Store
 ._.DS_Store
+github
+github.pub
+.gitignore

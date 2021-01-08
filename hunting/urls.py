@@ -19,7 +19,7 @@ from django.urls import include, path
 from . import views
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', views.Index.as_view(), name='zbrane'),
     path('admin/', admin.site.urls),
     path('bazar/', include('bazar.urls')),
     #url(r'^(?P<pocet>[0-9]+)/$', views.pocet, name='pocet'),

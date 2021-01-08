@@ -14,4 +14,5 @@ class Zbrane(generic.ListView):
     template_name = 'homepage/bazar.html'  # Specify your own template name/location 
 
     def get_queryset(self):
-        return Polozky.objects.filter(nazev__icontains='vzduchov')[:5]
+        return Polozky.objects.all()
+        #return Polozky.objects.filter(nazev__icontains='vzduchov')[:5]

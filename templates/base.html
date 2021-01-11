@@ -27,9 +27,9 @@
             <ul class="nav navbar-nav navbar-right">
 
                 <li><a href="/zbrane"> ZBRANĚ</a></li>
-                <li><a href="/strelnice"> STŘELNICE</a></li>
                 <li><a href="/loveckepotreby"> LOVECKÉ POTŘEBY</a></li>
                 <li><a href="/psy"> LOVEČTÍ PSY</a></li>
+                <li><a href="/strelnice"> STŘELNICE</a></li>
                 <li><a href="/pridat" class="btn"> + PŘIDAT INZERÁT</a></li>
 
                 {% if user.is_authenticated %}
@@ -41,9 +41,9 @@
                     <li><a href="/profile"><span class="glyphicon glyphicon-user"></span> Uživatelský profil</a></li>
                     <li><a href="/moje-inzeraty"><span class="glyphicon glyphicon-user"></span> Moje inzeráty</a></li>
                     <li><a href="/admin"><span class="glyphicon glyphicon-cog"></span> Administrace</a></li>
-                    <li><a href="/logout"><span class="glyphicon glyphicon-log-in"></span> Odhlásit</a></li>
+                    <li><a href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-in"></span> Odhlásit</a></li>
                 {% else %}
-                    <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Přihlásit</a></li>
+                    <li><a href="/accounts/login"><span class="glyphicon glyphicon-log-in"></span> Přihlásit</a></li>
                 {% endif %}
 
             </ul>
@@ -57,11 +57,30 @@
 
     <div class="container obsah">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-4">
+
+                <ul>
+                
+                        {% if user.is_authenticated %}
+                         Přihlášen: {{ user.username }}<br />
+                        <li><a href="/profile">Uživatelský profil</a></li>
+                        <li><a href="/moje-inzeraty"> Moje inzeráty</a></li>
+                        <li><a href="{% url 'logout' %}">Odhlásit se</a></li>
+                        {% else %}
+                            <!-- Nepřihlášen -->
+                        {% endif %}
+        
+    
+
+                </ul>
+            
+
+
                 <span>Reklamní kontejner</span>
+                <img src="{% static 'images/left-reklama.gif' %}">
             </div>
 
-            <div class="col-md-9">
+            <div class="col-md-8">
                 {% block content %}
                 {% endblock %}
             </div>

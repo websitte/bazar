@@ -66,7 +66,17 @@ copyright a{
 
 .navbar-inverse .navbar-nav > li > a {
     color:#d4c4ac;
-    font-weight: 400;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+    color: #fff;
+    background: none;
+    border-bottom: 4px solid #996600;
+    box-shadow: none;
+    -webkit-box-shadow: none;
 }
 
 div.box_vypis_inz {

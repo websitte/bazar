@@ -97,6 +97,8 @@ div.box_vypis_inz .obsah{
     padding: 10px 15px 10px 15px;
     border-left:1px solid #ded3a6;
     border-right:1px solid #ded3a6;
+    display: inline-block;
+    width: 100%;
 }
 
 div.box_vypis_inz span#tag{
@@ -119,14 +121,12 @@ div.box_vypis_inz .nadpis h3{
     line-height: 16px;
 }
 
-
-
-
 .box_cena{
     border:1px solid #ded3a6;
     border-top: 2px solid #ac7b57;
     padding: 10px 15px;
     background-color: #ded3a6;
+    clear: both;
 }
 
 .box_cena .cena {

@@ -13,7 +13,7 @@ class Polozky(models.Model):
     mesto = models.CharField(max_length=50)
     popis = models.TextField()
     #popis = RichTextField()
-    image = models.ImageField(upload_to='fotoinzerce/%Y/%m/%d',null=True,blank=True)
+    image = models.ImageField(upload_to='static/fotoinzerce/%Y/%m/%d',null=True,blank=True)
     vytvoreno = models.DateTimeField(default=timezone.now)
     publikovano = models.DateTimeField(blank=True, null=True)
 

@@ -14,7 +14,10 @@
                         <span class="inz_kontakt">Kategorie: {{ polozka.kategorie }} | {{ polozka.mesto }} | tel: {{ polozka.telefon }} </span>
                     </div>
                     <div class="obsah">
-                         <span>{{ polozka.popis }}</span>
+                        {% if polozka.image %}
+                        <img src="/{{ polozka.image }}" width="250" height="auto" style="float:left; margin:0 15px 0 0;">
+                        {% endif %}
+                        <span>{{ polozka.popis }}</span>
                     </div>
                     <div class="box_cena">
                         <span class="cena">Cena: {{ polozka.cena }} </span><br/>

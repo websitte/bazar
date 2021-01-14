@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from django.utils import timezone
 from bazar.models import Polozky
@@ -19,3 +19,8 @@ class Index(generic.ListView):
     def get_queryset(self):
         return Polozky.objects.all()
         #return Polozky.objects.filter(nazev__icontains='vzduchov')[:5]
+
+
+def inz_detail(request, pk):
+    polozka = get_object_or_404(Polozky, pk=pk)
+    return render(request, 'homepage/inz_detail.html', {'polozka': polozka})

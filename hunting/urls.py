@@ -25,4 +25,5 @@ urlpatterns = [
     #url(r'^(?P<pocet>[0-9]+)/$', views.pocet, name='pocet'),
     url(r'^ckeditor/', include('ckeditor_uploader.urls'),),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('detail/<int:pk>/', views.inz_detail, name='inz_detail')
 ]

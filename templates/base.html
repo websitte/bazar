@@ -31,6 +31,7 @@
                 <li><a href="/psy"> LOVEČTÍ PSY</a></li>
                 <li><a href="/strelnice"> STŘELNICE</a></li>
 
+                <!--
                 {% if user.is_authenticated %}
                     <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -44,7 +45,8 @@
                 {% else %}
                     <li><a href="/accounts/login"> <img src="{% static 'images/lock.svg' %}" width="18" height="18"></span></a></li>
                 {% endif %}
-
+                -->
+                <li><a href="/accounts/login"> <img src="{% static 'images/lock.svg' %}" width="18" height="18"></span></a></li>
             </ul>
 
         </div>
@@ -56,33 +58,35 @@
 
     <div class="container obsah">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-3">
 
-                
-                
-                        {% if user.is_authenticated %}
-                        <p> Přihlášen: {{ user.username }}</p>
-                         <ul>
-                        <li><a href="/profile" class="btn">Uživatelský profil</a></li>
-                        <li><a href="/moje-inzeraty" class="btn"> Moje inzeráty</a></li>
-                        <li><a href="{% url 'logout' %}" class="btn">Odhlásit se</a></li>
-                        {% else %}
-                            <!-- Nepřihlášen -->
-                        {% endif %}
-        
-    
-
-                </ul>
-            
-
+                <!-- Sidebar -->
+                {% if user.is_authenticated %} 
+                            Přihlášen: {{ user.username }}
+                <div class="bg-light border-right" id="sidebar-wrapper">
+                    <div class="sidebar-heading">
+                        
+                    </div>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item">Přidat inzerát</a>
+                        <a href="#" class="list-group-item">Moje inzeráty</a>
+                        <a href="#" class="list-group-item">Moje údaje</a>
+                        <a href="{% url 'logout' %}" class="list-group-item">Odhlásit se</a>
+                    </div>
+                </div>
+                {% else %}
+                    <!-- Nepřihlášen -->
+                {% endif %}
+                <!-- /#sidebar-wrapper -->
 
                 <span>Reklamní kontejner</span>
-                <img src="{% static 'images/left-reklama.gif' %}">
+                <img src="{% static 'images/left-reklama.gif' %}" width="100%" height="auto">
             </div>
 
-            <div class="col-md-8">
+            <div class="col-md-9">
                 {% block content %}
                 {% endblock %}
+
             </div>
         </div>
     </div>

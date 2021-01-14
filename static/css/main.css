@@ -87,7 +87,10 @@ div.box_vypis_inz .nadpis{
     background-color: #ae5016;
     color: #f5efd5;
     padding: 10px 15px;
+}
 
+div.box_vypis_inz .nadpis h3 a{
+    color: #f5efd5;
 }
 
 div.box_vypis_inz .obsah{
@@ -116,6 +119,9 @@ div.box_vypis_inz .nadpis h3{
     line-height: 16px;
 }
 
+
+
+
 .box_cena{
     border:1px solid #ded3a6;
     border-top: 2px solid #ac7b57;
@@ -130,4 +136,24 @@ div.box_vypis_inz .nadpis h3{
 
 .box_cena .vytvoreno {
     font-size: 12px;
+}
+.list-group {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.list-group-item {
+    background-color: white;
+    border: 1px solid #f5efd5;
+}
+
+a.list-group-item {
+    color: black;
+    font-weight: normal;
+}
+
+a.list-group-item:hover, a.list-group-item:focus {
+    color: black;
+    text-decoration: none;
+    background: #ded3a6;
+    background: linear-gradient(270deg, rgba(255,255,255,1) 10%, rgba(222,211,166,1) 100%);
 }

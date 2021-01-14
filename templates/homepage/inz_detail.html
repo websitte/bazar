@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <h2>Bazar Zbraní / {{ polozka.nazev }}</h2>
+
+        <div class="box_vypis_inz">
+            <div class="nadpis">
+                <h3><span id="tag">{{ polozka.typ }}</span>{{ polozka.nazev }}</h3>
+                <span class="inz_kontakt">Kategorie: {{ polozka.kategorie }} | {{ polozka.mesto }} | tel: {{ polozka.telefon }} </span>
+            </div>
+            <div class="obsah">
+                <span>{{ polozka.popis }}</span>
+            </div>
+            <div class="box_cena">
+                <span class="cena">Cena: {{ polozka.cena }} </span><br/>
+                <span class="vytvoreno">(inzerát vložen {{ polozka.vytvoreno }})</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

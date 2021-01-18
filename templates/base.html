@@ -1,4 +1,8 @@
 {% load static %}
+{% url 'home' as home_url %}
+{% url 'inz_new' as new_inzerat_url %}
+{% url 'inz_user' as user_inzerat_url %}
+
 <html>
 <head>
     <title>Hunting bazar - bazar, inzerce, zbraně, optika</title>
@@ -27,8 +31,8 @@
 
 
             <ul class="nav navbar-nav navbar-right">
-
-                <li class="active"><a href="/zbrane"> ZBRANĚ</a></li>
+                <li class="{% if request.path == home_url %} active {%endif%}"><a href="/"> ÚVOD</a></li>
+                <li><a href="/zbrane"> ZBRANĚ</a></li>
                 <li><a href="/loveckepotreby"> LOVECKÉ POTŘEBY</a></li>
                 <li><a href="/psy"> LOVEČTÍ PSY</a></li>
                 <li><a href="/strelnice"> STŘELNICE</a></li>
@@ -70,8 +74,8 @@
                         
                     </div>
                     <div class="list-group">
-                        <a href="#" class="list-group-item">Přidat inzerát <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-                        <a href="#" class="list-group-item">Moje inzeráty <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+                        <a href="{% url 'inz_new' %}" class="list-group-item {% if request.path == new_inzerat_url %} active {%endif%}">Přidat inzerát <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+                        <a href="{% url 'inz_user' %}" class="list-group-item {% if request.path == user_inzerat_url %} active {%endif%}">Moje inzeráty <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
                         <a href="#" class="list-group-item">Moje údaje <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
                         <a href="{% url 'logout' %}" class="list-group-item">Odhlásit se <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
                     </div>

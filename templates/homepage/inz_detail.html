@@ -15,7 +15,10 @@
                 <p>{{ polozka.popis }}</p>
             </div>
             <div class="box_cena">
-                <span class="cena">Cena: {{ polozka.cena }} </span><br/>
+                <span class="cena">Cena: {{ polozka.cena }} </span>
+                {% if user.is_authenticated %} 
+                <span class="edit"><a href="{% url 'inz_edit' pk=polozka.pk %}">upravit</a> / smazat</span>
+                {% endif %}
                 <span class="vytvoreno">(inzerát vložen {{ polozka.vytvoreno }})</span>
             </div>
         </div>

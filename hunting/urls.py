@@ -19,11 +19,9 @@ from django.urls import include, path
 from . import views
 
 urlpatterns = [
-    path('', views.Index.as_view(), name='zbrane'),
+    path('', views.Index.as_view(), name='home'),
     path('admin/', admin.site.urls),
     path('bazar/', include('bazar.urls')),
-    #url(r'^(?P<pocet>[0-9]+)/$', views.pocet, name='pocet'),
-    url(r'^ckeditor/', include('ckeditor_uploader.urls'),),
+    path('ckeditor/', include('ckeditor_uploader.urls'),),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('detail/<int:pk>/', views.inz_detail, name='inz_detail')
 ]

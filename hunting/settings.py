@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'bazar.apps.BazarConfig',
     'ckeditor',
     'ckeditor_uploader',
+    'bootstrapform',
 ]
 
 

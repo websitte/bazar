@@ -21,8 +21,8 @@ class Polozky(models.Model):
         self.published_date = timezone.now()
         self.save()
 
-#    def __str__(self):
-#        return self.nazev           # vrati nazev pro admin
+    def __str__(self):
+        return self.nazev           # vrati nazev pro admin
 
     class Meta:
         verbose_name = 'Inzerát'

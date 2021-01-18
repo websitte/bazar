@@ -22,9 +22,9 @@
                     </div>
                     <div class="obsah">
                         {% if polozka.image %}
-                        <img src="/{{ polozka.image }}" width="180" height="auto" style="float:left; margin:0 15px 0 0;">
+                        <img src="/{{ polozka.image }}" width="250" height="auto" style="float:left; margin:0 15px 0 0;">
                         {% endif %}
-                        <span>{{ polozka.popis|truncatechars:350 }}</span>
+                        <span>{{ polozka.popis|truncatechars:200 }}</span>
                     </div>
                     <div class="box_cena">
                         <span class="cena">Cena: {{ polozka.cena }} </span><br/>

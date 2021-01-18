@@ -4,6 +4,7 @@ from django.utils import timezone
 from bazar.models import Polozky
 from django.views import generic
 
+
 #def index(request):
 #   return HttpResponse("Citát pro Homepage <br />Pouze ti, kteří byli natolik naivní, že si mysleli že dokážou změnit svět, ho dokázali opravdu změnit.")
 
@@ -20,7 +21,3 @@ class Index(generic.ListView):
         return Polozky.objects.all()
         #return Polozky.objects.filter(nazev__icontains='vzduchov')[:5]
 
-
-def inz_detail(request, pk):
-    polozka = get_object_or_404(Polozky, pk=pk)
-    return render(request, 'homepage/inz_detail.html', {'polozka': polozka})

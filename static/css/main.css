@@ -125,15 +125,24 @@ div.box_vypis_inz .nadpis h3{
     padding: 10px 15px;
     background-color: #ded3a6;
     clear: both;
+    width: 100%;
 }
 
 .box_cena .cena {
     font-weight: bold;
     font-size: larger;
+    display: contents;
 }
 
 .box_cena .vytvoreno {
     font-size: 12px;
+}
+
+span.edit {
+    text-align:right;
+    width: 100%;
+    color:#7C4820;
+    display: block;
 }
 .list-group {
     -webkit-box-shadow: none;
@@ -141,7 +150,9 @@ div.box_vypis_inz .nadpis h3{
 }
 .list-group-item {
     background-color: white;
-    border: 1px solid #f5efd5;
+    border:0;
+    border-top: 1px solid #f5efd5;
+    border-bottom: 1px solid #f5efd5;
 }
 
 .list-group-item .glyphicon {
@@ -161,4 +172,14 @@ a.list-group-item:hover, a.list-group-item:focus {
     text-decoration: none;
     background: #ded3a6;
     background: linear-gradient(270deg, rgba(255,255,255,1) 10%, rgba(222,211,166,1) 100%);
+}
+
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+    text-shadow: none;
+    background-image: none;
+    filter: none;
+    background-color: #ded3a6;
+    color: black;
+    border-top: 1px solid #ded3a6;
+    border-bottom: 1px solid #ded3a6;
 }

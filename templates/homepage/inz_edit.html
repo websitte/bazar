@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <h2><a href="/">Bazar</a> / nový inzerát</h2>
+
+     <form method="POST" class="post-form">
+         {% csrf_token %}
+         <!--{{ form.as_p }}-->
+         {{ form.nazev|bootstrap }}
+         <div class="row">
+            <div class="col-lg-6">
+                {{ form.typ|bootstrap }}
+            </div>
+            <div class="col-lg-6">
+                {{ form.kategorie|bootstrap }}
+            </div>
+        </div>
+
+         <div class="row">
+            <div class="col-lg-6">
+                {{ form.mesto|bootstrap }}
+            </div>
+            <div class="col-lg-6">
+                {{ form.cena|bootstrap }}
+            </div>
+        </div>
+         {{ form.popis|bootstrap }}
+         {{ form.image|bootstrap }}
+         <button type="submit" class="save btn btn-default">Uložit inzerát</button>
+     </form>
+    </div>
+</div>
+
+{% endblock %}

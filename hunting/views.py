@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.utils import timezone
 from bazar.models import Polozky
 from django.views import generic
-
+from django.views.generic import ListView
 
 #def index(request):
 #   return HttpResponse("Citát pro Homepage <br />Pouze ti, kteří byli natolik naivní, že si mysleli že dokážou změnit svět, ho dokázali opravdu změnit.")
@@ -13,6 +13,7 @@ from django.views import generic
 #  return render(request, 'homepage/bazar.html', {'polozky': polozky})
 
 class Index(generic.ListView):
+    paginate_by = 3
     model = Polozky
     context_object_name = 'zbrane_list'   # your own name for the list as a template variableß
     template_name = 'homepage/bazar.html'  # Specify your own template name/location 
@@ -21,3 +22,8 @@ class Index(generic.ListView):
         return Polozky.objects.all()
         #return Polozky.objects.filter(nazev__icontains='vzduchov')[:5]
 
+
+class Profil(generic.ListView):
+    model = Polozky
+    context_object_name = 'profil'   # your own name for the list as a template variableß
+    template_name = 'homepage/profil.html'  # Specify your own template name/location 

@@ -20,6 +20,7 @@ from . import views
 
 urlpatterns = [
     path('', views.Index.as_view(), name='home'),
+    path('profil', views.Profil.as_view(), name='profil'),
     path('admin/', admin.site.urls),
     path('bazar/', include('bazar.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls'),),

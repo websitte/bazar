@@ -2,6 +2,7 @@
 {% url 'home' as home_url %}
 {% url 'inz_new' as new_inzerat_url %}
 {% url 'inz_user' as user_inzerat_url %}
+{% url 'profil' as profil_url %}
 
 <html>
 <head>
@@ -76,12 +77,15 @@
                     <div class="list-group">
                         <a href="{% url 'inz_new' %}" class="list-group-item {% if request.path == new_inzerat_url %} active {%endif%}">Přidat inzerát <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
                         <a href="{% url 'inz_user' %}" class="list-group-item {% if request.path == user_inzerat_url %} active {%endif%}">Moje inzeráty <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-                        <a href="#" class="list-group-item">Moje údaje <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+                        <a href="{% url 'profil' %}" class="list-group-item {% if request.path == profil_url %} active {%endif%}">Moje údaje <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
                         <a href="{% url 'logout' %}" class="list-group-item">Odhlásit se <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
                     </div>
                 </div>
                 {% else %}
                     <!-- Nepřihlášen -->
+                    <div class="list-group">
+                        <a href="{% url 'inz_new' %}" class="list-group-item {% if request.path == new_inzerat_url %} active {%endif%}">Přidat inzerát <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+                    </div>
                 {% endif %}
                 <!-- /#sidebar-wrapper -->
 

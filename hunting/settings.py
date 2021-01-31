@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'bootstrapform',
+    'bootstrap_modal_forms',
+    'widget_tweaks', #rozšíření formulářu o css
 ]
 
 

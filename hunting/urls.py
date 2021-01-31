@@ -25,4 +25,5 @@ urlpatterns = [
     path('bazar/', include('bazar.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls'),),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('login/', views.CustomLoginView.as_view(), name='login'),
 ]

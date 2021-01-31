@@ -15,7 +15,7 @@
 
                 
                 {% for polozka in zbrane_list %}
-                <div class="box_vypis_inz">
+                <div class="animate__animated animate__fadein box_vypis_inz">
                     <div class="nadpis">
                         <h3><span id="tag">{{ polozka.typ }}</span><a href="{% url 'inz_detail' pk=polozka.pk %}">{{ polozka.nazev }}</a></h3>
                         <span class="inz_kontakt">Kategorie: {{ polozka.kategorie }} | {{ polozka.mesto }} | tel: {{ polozka.telefon }} </span>
@@ -31,6 +31,14 @@
                         <span class="vytvoreno">(inzerát vložen {{ polozka.vytvoreno }})</span>
                     </div>
                 </div>
+                {% if forloop.counter == 2 %}
+                    <p>reklamní kontejner 1 </p>
+                {% endif %}
+
+                {% if forloop.counter == 4 %}
+                    <p>reklamní kontejner 2 </p>
+                {% endif %}
+
                 {% endfor %}     
                 
                 <div class="pagination">
@@ -39,7 +47,7 @@
                             <a href="?page=1">&laquo; první</a>
                             <a href="?page={{ page_obj.previous_page_number }}">předchozí</a>
                         {% endif %}
-                        {{ page_obj.list }}
+                       
                         <span class="current">
                             Strana {{ page_obj.number }} z {{ page_obj.paginator.num_pages }}
                         </span>

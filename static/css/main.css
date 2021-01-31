@@ -22,6 +22,13 @@ h2, h2 a {
     font-weight: bold;
 }
 
+a, a:hover {
+    color:#2e1411;
+}
+small {
+    font-weight: bold;
+}
+
 hr{
     border-bottom:1px solid #e7deb7;
     display: block;
@@ -51,9 +58,11 @@ copyright span{
     font-size: 12px;
 }
 
-copyright a{
-    color:black;
-    font-weight: bold;
+copyright {
+    background-color:black;
+    display: block;
+    text-align: center;
+    padding: 10px 0;
 }
 
 .navbar-inverse {
@@ -92,7 +101,7 @@ div.box_vypis_inz .nadpis h3 a{
 }
 
 div.box_vypis_inz .obsah{
-    padding: 10px 15px 10px 15px;
+    padding: 15px;
     border-left:1px solid #ded3a6;
     border-right:1px solid #ded3a6;
     display: inline-block;
@@ -137,6 +146,8 @@ div.box_vypis_inz .nadpis h3{
 .box_cena .vytvoreno {
     font-size: 12px;
 }
+
+
 
 span.edit {
     text-align:right;
@@ -183,3 +194,60 @@ a.list-group-item:hover, a.list-group-item:focus {
     border-top: 1px solid #ded3a6;
     border-bottom: 1px solid #ded3a6;
 }
+
+
+.modal-content {
+    border:0;
+    border-radius: 0; 
+    background-color: #f5efd5;
+}
+
+.modal-header {
+    border-bottom: 2px solid #ac7b57;
+    background-color: #ded3a6;
+}
+
+.modal-header .close {
+    margin-top: -35px;
+}
+
+.close {
+    float: right;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1;
+    color: #ac7b57;
+    text-shadow: none;
+    filter: alpha(opacity=20);
+    opacity: 1;
+}
+
+.modal-footer {
+    border-top: 1px solid #ded3a6;
+}
+
+@media (min-width: 768px){
+.modal-dialog {
+    width: 350px;
+    margin: 100px auto;
+}}
+a.registrace {
+    line-height: 32px;
+    float: left;
+}
+
+.btn-primary {
+    background: none;
+    background-color:#ae5016;
+    padding: 8px 13px;
+    display: block;
+    width: fit-content;
+    border:0;
+    float: right;
+    border-radius: 0;
+}
+.btn-primary:hover, .btn-primary:focus {
+    background-color:#7C4820;
+    background-position: 0 -15px;
+}
+    

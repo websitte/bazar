@@ -3,6 +3,7 @@ body  {
     font-family: 'Open Sans';
     color: #2e1411;
     font-weight: 200;
+    display: flex;
 }
 
 h1, h1 a {
@@ -80,7 +81,7 @@ div.box_vypis_inz .nadpis{
 }
 
 div.box_vypis_inz .obsah{
-    padding: 10px 15px 10px 15px;
+    padding: 15px;
     border-left:1px solid #ded3a6;
     border-right:1px solid #ded3a6;
 }

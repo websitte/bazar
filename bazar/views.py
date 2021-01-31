@@ -5,6 +5,7 @@ from django.utils import timezone
 from .models import KategorieBazaru, Polozky
 from django.views import generic
 from .forms import InzForm
+from django.views.generic import ListView
 from django.contrib.auth.decorators import login_required
 
 #def index(request): 

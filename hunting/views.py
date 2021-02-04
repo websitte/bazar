@@ -6,7 +6,6 @@ from django.views import generic
 from django.views.generic import ListView
 from django.contrib.auth.models import User
 from django.urls import reverse_lazy
-from bootstrap_modal_forms.generic import BSModalCreateView
 from bootstrap_modal_forms.generic import BSModalLoginView
 from .forms import CustomAuthenticationForm
 

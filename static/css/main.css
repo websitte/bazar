@@ -1,8 +1,8 @@
 body  {
     background-color: #f5efd5;
-    font-family: 'Open Sans';
+    font-family: 'Ubuntu', sans-serif;
     color: #2e1411;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 h1, h1 a {
@@ -15,29 +15,38 @@ h1, h1 a {
 }
 
 h2, h2 a {
-    color: #5f2918;
+    color: #ae5016;
     margin: 0 0 10px 0;
     padding:0;
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 400;
 }
 
 a, a:hover {
     color:#2e1411;
 }
+
+b, strong {
+    font-weight: 400;
+}
+
 small {
-    font-weight: bold;
+    font-weight: 400;
 }
 
 hr{
     border-bottom:1px solid #e7deb7;
     display: block;
     height: 2px;
-} 
+}
+
+label {
+    font-weight: 400;
+}
 
 #logo {
     color: #deb16a;
-    font-weight: bold;
+    font-weight: 400;
 }
 
 .container.obsah {
@@ -73,7 +82,7 @@ copyright {
 
 .navbar-inverse .navbar-nav > li > a {
     color:#d4c4ac;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 15px;
 }
 
@@ -121,7 +130,7 @@ div.box_vypis_inz span#tag{
 }
 
 div.box_vypis_inz .nadpis h3{
-    font-weight: bold;
+    font-weight: 400;
     font-size: 16px;
     margin: 0;
     padding-bottom: 4px;
@@ -138,7 +147,7 @@ div.box_vypis_inz .nadpis h3{
 }
 
 .box_cena .cena {
-    font-weight: bold;
+    font-weight: 400;
     font-size: larger;
     display: contents;
 }
@@ -174,12 +183,12 @@ span.edit {
 }
 
 a.list-group-item {
-    color: black;
+    color: rgb(57, 57, 57);
     font-weight: normal;
 }
 
 a.list-group-item:hover, a.list-group-item:focus {
-    color: black;
+    color: rgb(57, 57, 57);
     text-decoration: none;
     background: #ded3a6;
     background: linear-gradient(270deg, rgba(255,255,255,1) 10%, rgba(222,211,166,1) 100%);
@@ -208,7 +217,7 @@ a.list-group-item:hover, a.list-group-item:focus {
 }
 
 .modal-header .close {
-    margin-top: -35px;
+    margin-top: -37px;
 }
 
 .close {
